@@ -1,0 +1,156 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: HAPS (R) ProtoCompiler 100
+Build: R-2020.12-SP1-1
+Install: /usr/cadtool/csr5306/synopsys/protocomp/R-2020.12-SP1-1
+OS: CentOS Linux 7 (Core)
+Hostname: ws35
+max virtual memory: unlimited (bytes)
+max user processes: 4096
+max stack size: 10485760 (bytes)
+
+
+Database state : /home/u108/u108061119/synopsys/final_ver2/Adder_demo/|sg0
+Synopsys Xilinx Technology Mapper, Version map202012pcp4, Build 193R, Built Apr  8 2022 21:27:09, @4216327
+
+
+Id  Slack (ns)  Source Clock  Sink Clock  Exception  Hops    TDMs used per hop**  Total TDM delay (ns)*                   User logic delay (ns)  Path delay (ns)  Requirement (ns)  Start Point        End Point        Net Name                  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1   980.420     System:r      System:r    -          FB1_uA  x1: x1               (trace:5.146) + (trace:5.146) = 10.292  7.970                  19.580           1000.000          a[1:0].a[0]        sum[1:0].sum[0]  a_aptn_ft[0]: sum[0]      
+2   980.420     System:r      System:r    -          FB1_uA  x1: x1               (trace:5.146) + (trace:5.146) = 10.292  4.563                  19.580           1000.000          b[1:0].b[0]        sum[1:0].sum[0]  b_aptn_ft[0]: sum[0]      
+3   980.420     System:r      System:r    -          FB1_uA  x1: x1               (trace:5.146) + (trace:5.146) = 10.292  4.563                  19.580           1000.000          carry_in.carry_in  sum[1:0].sum[0]  carry_in_aptn_ft: sum[0]  
+4   981.465     System:r      System:r    -          FB1_uA  x1: x1               (trace:5.146) + (trace:3.753) = 8.899   6.229                  18.535           1000.000          a[1:0].a[0]        sum[1:0].sum[1]  a_aptn_ft[0]: carry1      
+5   981.465     System:r      System:r    -          FB1_uA  x1: x1               (trace:5.146) + (trace:3.753) = 8.899   2.474                  18.535           1000.000          b[1:0].b[0]        sum[1:0].sum[1]  b_aptn_ft[0]: carry1      
+6   981.465     System:r      System:r    -          FB1_uA  x1: x1               (trace:5.146) + (trace:3.753) = 8.899   2.474                  18.535           1000.000          carry_in.carry_in  sum[1:0].sum[1]  carry_in_aptn_ft: carry1  
+================================================================================================================================================================================================================================================
+
+Path: #1
+Starting point:                     a[1:0]/a[0]
+Ending point:                       sum[1:0]/sum[0]
+The start point is clocked by       System [rising]
+The end point is clocked by         System [rising]
+Arrival time                        19.580
+Required time                       1000.000
+Slack:                              980.420
+
+Instance / Net name             Pin name     Type     FPGA       Arrival time
+-----------------------------------------------------------------------------
+a[1:0]                          a[0]         Port     top               1.318
+FB1.uB/a_aptn_ft_obuf[0]        O            OBUF     FB1_uB            3.407
+a_aptn_ft[0]                    -            Net      -          -           
+FB1.uA/dut_inst.a_ibuf[0]       I            IBUF     FB1_uA            8.553
+FB1.uA/dut_inst.sum_obuf[0]     O            OBUF     FB1_uA           11.027
+sum[0]                          -            Net      -          -           
+FB1.uB/sum_0_ibuf[0]            I            IBUF     FB1_uB           16.173
+sum[1:0]                        sum[0]       Port     top              19.580
+=============================================================================
+
+Path: #2
+Starting point:                     b[1:0]/b[0]
+Ending point:                       sum[1:0]/sum[0]
+The start point is clocked by       System [rising]
+The end point is clocked by         System [rising]
+Arrival time                        19.580
+Required time                       1000.000
+Slack:                              980.420
+
+Instance / Net name             Pin name     Type     FPGA       Arrival time
+-----------------------------------------------------------------------------
+b[1:0]                          b[0]         Port     top               1.318
+FB1.uB/b_aptn_ft_obuf[0]        O            OBUF     FB1_uB            3.407
+b_aptn_ft[0]                    -            Net      -          -           
+FB1.uA/dut_inst.b_ibuf[0]       I            IBUF     FB1_uA            8.553
+FB1.uA/dut_inst.sum_obuf[0]     O            OBUF     FB1_uA           11.027
+sum[0]                          -            Net      -          -           
+FB1.uB/sum_0_ibuf[0]            I            IBUF     FB1_uB           16.173
+sum[1:0]                        sum[0]       Port     top              19.580
+=============================================================================
+
+Path: #3
+Starting point:                     carry_in/carry_in
+Ending point:                       sum[1:0]/sum[0]
+The start point is clocked by       System [rising]
+The end point is clocked by         System [rising]
+Arrival time                        19.580
+Required time                       1000.000
+Slack:                              980.420
+
+Instance / Net name               Pin name     Type     FPGA       Arrival time
+-------------------------------------------------------------------------------
+carry_in                          carry_in     Port     top               1.318
+FB1.uB/carry_in_aptn_ft_obuf      O            OBUF     FB1_uB            3.407
+carry_in_aptn_ft                  -            Net      -          -           
+FB1.uA/dut_inst.carry_in_ibuf     I            IBUF     FB1_uA            8.553
+FB1.uA/dut_inst.sum_obuf[0]       O            OBUF     FB1_uA           11.027
+sum[0]                            -            Net      -          -           
+FB1.uB/sum_0_ibuf[0]              I            IBUF     FB1_uB           16.173
+sum[1:0]                          sum[0]       Port     top              19.580
+===============================================================================
+
+Path: #4
+Starting point:                     a[1:0]/a[0]
+Ending point:                       sum[1:0]/sum[1]
+The start point is clocked by       System [rising]
+The end point is clocked by         System [rising]
+Arrival time                        18.535
+Required time                       1000.000
+Slack:                              981.465
+
+Instance / Net name             Pin name     Type     FPGA       Arrival time
+-----------------------------------------------------------------------------
+a[1:0]                          a[0]         Port     top               1.318
+FB1.uB/a_aptn_ft_obuf[0]        O            OBUF     FB1_uB            3.407
+a_aptn_ft[0]                    -            Net      -          -           
+FB1.uA/dut_inst.a_ibuf[0]       I            IBUF     FB1_uA            8.553
+FB1.uA/dut_inst.carry1_obuf     O            OBUF     FB1_uA           11.027
+carry1                          -            Net      -          -           
+FB1.uB/dut_inst.carry1_ibuf     I            IBUF     FB1_uB           14.780
+sum[1:0]                        sum[1]       Port     top              18.535
+=============================================================================
+
+Path: #5
+Starting point:                     b[1:0]/b[0]
+Ending point:                       sum[1:0]/sum[1]
+The start point is clocked by       System [rising]
+The end point is clocked by         System [rising]
+Arrival time                        18.535
+Required time                       1000.000
+Slack:                              981.465
+
+Instance / Net name             Pin name     Type     FPGA       Arrival time
+-----------------------------------------------------------------------------
+b[1:0]                          b[0]         Port     top               1.318
+FB1.uB/b_aptn_ft_obuf[0]        O            OBUF     FB1_uB            3.407
+b_aptn_ft[0]                    -            Net      -          -           
+FB1.uA/dut_inst.b_ibuf[0]       I            IBUF     FB1_uA            8.553
+FB1.uA/dut_inst.carry1_obuf     O            OBUF     FB1_uA           11.027
+carry1                          -            Net      -          -           
+FB1.uB/dut_inst.carry1_ibuf     I            IBUF     FB1_uB           14.780
+sum[1:0]                        sum[1]       Port     top              18.535
+=============================================================================
+
+Path: #6
+Starting point:                     carry_in/carry_in
+Ending point:                       sum[1:0]/sum[1]
+The start point is clocked by       System [rising]
+The end point is clocked by         System [rising]
+Arrival time                        18.535
+Required time                       1000.000
+Slack:                              981.465
+
+Instance / Net name               Pin name     Type     FPGA       Arrival time
+-------------------------------------------------------------------------------
+carry_in                          carry_in     Port     top               1.318
+FB1.uB/carry_in_aptn_ft_obuf      O            OBUF     FB1_uB            3.407
+carry_in_aptn_ft                  -            Net      -          -           
+FB1.uA/dut_inst.carry_in_ibuf     I            IBUF     FB1_uA            8.553
+FB1.uA/dut_inst.carry1_obuf       O            OBUF     FB1_uA           11.027
+carry1                            -            Net      -          -           
+FB1.uB/dut_inst.carry1_ibuf       I            IBUF     FB1_uB           14.780
+sum[1:0]                          sum[1]       Port     top              18.535
+===============================================================================
+

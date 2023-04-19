@@ -1,0 +1,265 @@
+# Wed Apr 19 14:41:57 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: HAPS (R) ProtoCompiler 100
+Build: R-2020.12-SP1-1
+Install: /usr/cadtool/csr5306/synopsys/protocomp/R-2020.12-SP1-1
+OS: CentOS Linux 7 (Core)
+Hostname: ws35
+max virtual memory: unlimited (bytes)
+max user processes: 4096
+max stack size: 10485760 (bytes)
+
+
+Database state : /home/u108/u108061119/synopsys/final_ver2/Adder_demo/|sg0
+Synopsys Xilinx Technology Mapper, Version map202012pcp4, Build 193R, Built Apr  8 2022 21:27:09, @4216327
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 237MB peak: 237MB)
+
+@N: MF913 |Option synthesis_strategy=fast is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+@N: MF119 |Unified Time Budget flow enabled 
+
+Start loading fpga timing model (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished loading fpga timing model (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 782MB peak: 782MB)
+
+
+Finished insertion of fpga timing model (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 782MB peak: 782MB)
+
+@N: MF404 |Running Normal timing estimation with effort level 'LOW'
+
+Finished time budget netlist preparation (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 782MB peak: 782MB)
+
+
+Finished writer setup (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 782MB peak: 782MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 782MB peak: 782MB)
+
+@N: MT649 |During time budgeting, Vivado latch mode is off. 
+@N: MT650 |During time budgeting, latch-based time borrowing is disabled. 
+
+
+@S0 |##### START OF TIMING REPORT #####[
+# Timing report written on Wed Apr 19 14:42:10 2023
+#
+
+
+Top view:               top
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+The system contains the following FPGAs:
+    FB1.uA : XCVU19PFSVA3824, speedgrade -1-e
+    FB1.uB : XCVU19PFSVA3824, speedgrade -1-e
+Constraint File(s):    /home/u108/u108061119/synopsys/final_ver2/design.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+
+@S0.0 |Performance Summary
+*******************
+
+
+Worst slack in design: 980.420
+
+                   Requested     Estimated     Requested     Estimated                 Clock      Clock          
+Starting Clock     Frequency     Frequency     Period        Period        Slack       Type       Group          
+-----------------------------------------------------------------------------------------------------------------
+System             1.0 MHz       51.1 MHz      1000.000      19.580        980.420     system     system_clkgroup
+=================================================================================================================
+
+
+
+
+
+@S0.0 |Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------
+System    System  |  1000.000    980.420  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+
+
+Input Ports: 
+
+Port         Starting            User           Arrival     Required            
+Name         Reference           Constraint     Time        Time         Slack  
+             Clock                                                              
+--------------------------------------------------------------------------------
+a[0]         System (rising)     NA             0.000       980.420      980.420
+a[1]         System (rising)     NA             0.000       994.890      994.890
+b[0]         System (rising)     NA             0.000       980.420      980.420
+b[1]         System (rising)     NA             0.000       994.890      994.890
+carry_in     System (rising)     NA             0.000       980.420      980.420
+================================================================================
+
+
+Output Ports: 
+
+Port          Starting            User           Arrival     Required            
+Name          Reference           Constraint     Time        Time         Slack  
+              Clock                                                              
+---------------------------------------------------------------------------------
+carry_out     System (rising)     NA             18.535      1000.000     981.465
+sum[0]        System (rising)     NA             19.580      1000.000     980.420
+sum[1]        System (rising)     NA             18.535      1000.000     981.465
+=================================================================================
+
+
+
+====================================
+@S0.0 |Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+             Starting                                         Arrival            
+Instance     Reference     Type     Pin          Net          Time        Slack  
+             Clock                                                               
+---------------------------------------------------------------------------------
+a[1:0]       System        Port     a[0]         a[0]         0.000       980.420
+b[1:0]       System        Port     b[0]         b[0]         0.000       980.420
+carry_in     System        Port     carry_in     carry_in     0.000       980.420
+a[1:0]       System        Port     a[1]         a[1]         0.000       994.890
+b[1:0]       System        Port     b[1]         b[1]         0.000       994.890
+=================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+              Starting                                                Required            
+Instance      Reference     Type     Pin           Net                Time         Slack  
+              Clock                                                                       
+------------------------------------------------------------------------------------------
+sum[1:0]      System        Port     sum[0]        sum_aptn_ft[0]     1000.000     980.420
+carry_out     System        Port     carry_out     carry_out          1000.000     981.465
+sum[1:0]      System        Port     sum[1]        sum[1]             1000.000     981.465
+==========================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    = Required time:                         1000.000
+
+    - Propagation time:                      19.580
+    = Slack (critical) :                     980.420
+
+    Number of logic level(s):                7
+    Starting point:                          a[1:0] / a[0]
+    Ending point:                            sum[1:0] / sum[0]
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                   Pin        Pin               Arrival      No. of    
+Name                                    Type     Name       Dir     Delay     Time         Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+a[1:0]                                  Port     a[0]       In      0.000     0.000 r      -         
+a[0]                                    Net      -          -       1.318     -            1         
+FB1.uB.a_0_ibuf[0]                      IBUF     I          In      -         1.318 r      -         
+FB1.uB.a_0_ibuf[0]                      IBUF     O          Out     0.790     2.108 r      -         
+a_c[0]                                  Net      -          -       0.273     -            1         
+FB1.uB.a_aptn_ft_obuf[0]                OBUF     I          In      -         2.381 r      -         
+FB1.uB.a_aptn_ft_obuf[0]                OBUF     O          Out     1.026     3.407 r      -         
+a_aptn_ft[0]                            Net      -          -       5.146     -            1         
+FB1.uA.dut_inst.a_ibuf[0]               IBUF     I          In      -         8.553 r      -         
+FB1.uA.dut_inst.a_ibuf[0]               IBUF     O          Out     0.790     9.343 r      -         
+dut_inst.a_c[0]                         Net      -          -       0.319     -            2         
+FB1.uA.dut_inst.sum_1.CO0_lut6_2_o5     LUT3     I0         In      -         9.662 r      -         
+FB1.uA.dut_inst.sum_1.CO0_lut6_2_o5     LUT3     O          Out     0.066     9.728 r      -         
+dut_inst.sum_c[0]                       Net      -          -       0.273     -            1         
+FB1.uA.dut_inst.sum_obuf[0]             OBUF     I          In      -         10.001 r     -         
+FB1.uA.dut_inst.sum_obuf[0]             OBUF     O          Out     1.026     11.027 r     -         
+sum[0]                                  Net      -          -       5.146     -            1         
+FB1.uB.sum_0_ibuf[0]                    IBUF     I          In      -         16.173 r     -         
+FB1.uB.sum_0_ibuf[0]                    IBUF     O          Out     0.790     16.963 r     -         
+sum_c[0]                                Net      -          -       0.273     -            1         
+FB1.uB.sum_aptn_ft_obuf[0]              OBUF     I          In      -         17.236 r     -         
+FB1.uB.sum_aptn_ft_obuf[0]              OBUF     O          Out     1.026     18.262 r     -         
+sum_aptn_ft[0]                          Net      -          -       1.318     -            1         
+sum[1:0]                                Port     sum[0]     Out     -         19.580 r     -         
+=====================================================================================================
+Total path delay (propagation time + setup) of 19.580 is 5.514(28.2%) logic and 14.066(71.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+@S0.0 |Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 1242MB peak: 1242MB)
+
+
+Starting Time budgeting (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 1242MB peak: 1242MB)
+
+
+Starting CTB multihop constraint generation  (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 1242MB peak: 1242MB)
+
+
+Time-Budgeting stats:
+-----------------------------------------------------
+	 # partitions  			=          3
+	 # paths       			=          6
+		 # 3-hop paths     	=          6
+	 # timing segments 		=         18
+	 # logic segments  		=         11
+-----------------------------------------------------
+
+Finished CTB multihop constraint generation  (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 1242MB peak: 1242MB)
+
+
+Finished Time budgeting (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 1242MB peak: 1242MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 1242MB peak: 1242MB)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 1242MB peak: 1242MB)
+
+Process took 0h:00m:13s realtime, 0h:00m:13s cputime
+# Wed Apr 19 14:42:10 2023
+
+###########################################################]

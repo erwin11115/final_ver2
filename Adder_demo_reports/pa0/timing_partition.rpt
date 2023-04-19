@@ -1,0 +1,124 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: HAPS (R) ProtoCompiler 100
+Build: R-2020.12-SP1-1
+Install: /usr/cadtool/csr5306/synopsys/protocomp/R-2020.12-SP1-1
+OS: CentOS Linux 7 (Core)
+Hostname: ws35
+max virtual memory: unlimited (bytes)
+max user processes: 4096
+max stack size: 8388608 (bytes)
+
+
+Database state : /home/u108/u108061119/synopsys/final_ver2/Adder_demo/|pa0
+Synopsys ProtoCompiler Partitioner/Router, Version map202012pcp4, Build 193R, Built Apr  8 2022 21:27:09, @4216327
+
+
+To see more or fewer paths in this report, use option '-report_timing_paths <count>'
+
+Start points with multiple hops: 3
+End points with multiple hops: 2
+Printing up to 10 paths
+
+Path #1 through net carry_out
+Hops  Type*         Bin/TDM            Clock/Cell/Net  Cell_Type        
+----------------------------------------------------------------------
+      Start Clock                      System:r                         
+0     Port          TOP_IO_HT3_FB1_B5  b[0]                             
+      Net(DP)                          b[0]                             
+0     Cell          FB1.uA             adder1          one_bit_adder_1  
+      Net                              carry1                           
+1     Cell          FB1.uB             adder2          one_bit_adder_0  
+      Net(DP)                          carry_out                        
+1     Port          TOP_IO_HT3_FB1_B5  carry_out                        
+      End Clock(s)                     System:r                         
+======================================================================
+     *Net Flags: A=AsynchReset  B=Bidir/Tristate  C=Clock  D=Direct  F=Feedthrough  P=PortNet 
+
+Path #2 through net a[0]
+Hops  Type*         Bin/TDM            Clock/Cell/Net  Cell_Type        
+----------------------------------------------------------------------
+      Start Clock                      System:r                         
+0     Port          TOP_IO_HT3_FB1_B5  a[0]                             
+      Net(DP)                          a[0]                             
+0     Cell          FB1.uA             adder1          one_bit_adder_1  
+      Net                              carry1                           
+1     Cell          FB1.uB             adder2          one_bit_adder_0  
+      Net(DP)                          carry_out                        
+1     Port          TOP_IO_HT3_FB1_B5  carry_out                        
+      End Clock(s)                     System:r                         
+======================================================================
+     *Net Flags: A=AsynchReset  B=Bidir/Tristate  C=Clock  D=Direct  F=Feedthrough  P=PortNet 
+
+Path #3 through net carry_in
+Hops  Type*         Bin/TDM            Clock/Cell/Net  Cell_Type        
+----------------------------------------------------------------------
+      Start Clock                      System:r                         
+0     Port          TOP_IO_HT3_FB1_B5  carry_in                         
+      Net(DP)                          carry_in                         
+0     Cell          FB1.uA             adder1          one_bit_adder_1  
+      Net                              carry1                           
+1     Cell          FB1.uB             adder2          one_bit_adder_0  
+      Net(DP)                          carry_out                        
+1     Port          TOP_IO_HT3_FB1_B5  carry_out                        
+      End Clock(s)                     System:r                         
+======================================================================
+     *Net Flags: A=AsynchReset  B=Bidir/Tristate  C=Clock  D=Direct  F=Feedthrough  P=PortNet 
+
+Path #4 through net sum[1]
+Hops  Type*         Bin/TDM            Clock/Cell/Net  Cell_Type        
+----------------------------------------------------------------------
+      Start Clock                      System:r                         
+0     Port          TOP_IO_HT3_FB1_B5  b[0]                             
+      Net(DP)                          b[0]                             
+0     Cell          FB1.uA             adder1          one_bit_adder_1  
+      Net                              carry1                           
+1     Cell          FB1.uB             adder2          one_bit_adder_0  
+      Net(DP)                          sum[1]                           
+1     Port          TOP_IO_HT3_FB1_B5  sum[1]                           
+      End Clock(s)                     System:r                         
+======================================================================
+     *Net Flags: A=AsynchReset  B=Bidir/Tristate  C=Clock  D=Direct  F=Feedthrough  P=PortNet 
+
+Path #5 through net sum[0]
+Hops  Type*         Bin/TDM            Clock/Cell/Net  Cell_Type        
+----------------------------------------------------------------------
+      Start Clock                      System:r                         
+0     Port          TOP_IO_HT3_FB1_B5  b[0]                             
+      Net(DP)                          b[0]                             
+0     Cell          FB1.uA             adder1          one_bit_adder_1  
+      Net(DP)                          sum[0]                           
+0     Port          TOP_IO_HT3_FB1_B5  sum[0]                           
+      End Clock(s)                     System:r                         
+======================================================================
+     *Net Flags: A=AsynchReset  B=Bidir/Tristate  C=Clock  D=Direct  F=Feedthrough  P=PortNet 
+
+Path #6 through net b[1]
+Hops  Type*         Bin/TDM            Clock/Cell/Net  Cell_Type        
+----------------------------------------------------------------------
+      Start Clock                      System:r                         
+0     Port          TOP_IO_HT3_FB1_B5  b[1]                             
+      Net(DP)                          b[1]                             
+0     Cell          FB1.uB             adder2          one_bit_adder_0  
+      Net(DP)                          carry_out                        
+0     Port          TOP_IO_HT3_FB1_B5  carry_out                        
+      End Clock(s)                     System:r                         
+======================================================================
+     *Net Flags: A=AsynchReset  B=Bidir/Tristate  C=Clock  D=Direct  F=Feedthrough  P=PortNet 
+
+Path #7 through net a[1]
+Hops  Type*         Bin/TDM            Clock/Cell/Net  Cell_Type        
+----------------------------------------------------------------------
+      Start Clock                      System:r                         
+0     Port          TOP_IO_HT3_FB1_B5  a[1]                             
+      Net(DP)                          a[1]                             
+0     Cell          FB1.uB             adder2          one_bit_adder_0  
+      Net(DP)                          carry_out                        
+0     Port          TOP_IO_HT3_FB1_B5  carry_out                        
+      End Clock(s)                     System:r                         
+======================================================================
+     *Net Flags: A=AsynchReset  B=Bidir/Tristate  C=Clock  D=Direct  F=Feedthrough  P=PortNet 
