@@ -1,4 +1,8 @@
 # final_ver2
+## Introduce
+此project目的在於熟悉HAPS的實際操作過程
+
+
 
 using two one-bit-adder to develope a two bits adder in HAPS
 
