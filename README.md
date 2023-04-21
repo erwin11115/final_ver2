@@ -17,6 +17,6 @@
 ![image](https://user-images.githubusercontent.com/57473132/233534197-20af42b1-b9d8-4a50-9579-2bac9ed63bcd.png)
 
 ## 5. Conclusion
-學習使用 HAPS 的過程，就有許多細節須注意設計，所以使用簡單的 RTL code 可以避免一些程式碼產生的問題，適合新手專注在學習操作過程。
+學習使用 HAPS 的過程，就有許多細節須注意設計，所以使用簡單的 RTL code 可以避免一些程式碼產生的問題，適合我們目前新手專注在學習操作過程。
 
 
