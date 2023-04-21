@@ -12,7 +12,7 @@
 ![image](https://user-images.githubusercontent.com/57473132/233527976-37484ea2-df3c-442a-8688-591d1bbecf02.png)
 ## 4. Timing report
 #### FB1_uA_timing_summary.txt
-![image](https://user-images.githubusercontent.com/57473132/233531309-c258df6b-12ac-45ff-a75e-7cdab1ccf043.png)
+![image](https://user-images.githubusercontent.com/57473132/233534312-bfa64ec5-cd37-4010-b5ac-6f06f5341545.png)
 #### FB1_uA_timing_summary_Min.txt
 ![image](https://user-images.githubusercontent.com/57473132/233534197-20af42b1-b9d8-4a50-9579-2bac9ed63bcd.png)
 
